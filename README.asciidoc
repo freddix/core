@@ -1,0 +1,7 @@
+Core
+====
+Fryderyk Dziarmagowski <freddy@freddix.org>
+v0.1, April 2012
+
+A set of configuration and setup files.
+
