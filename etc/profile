@@ -1,0 +1,6 @@
+umask 022
+
+if [ -d ~/tmp ]; then
+    export TMPDIR=~/tmp
+fi
+

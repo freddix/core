@@ -29,6 +29,7 @@ usb::78:
 fuse::84:
 logs::124:
 fileshare::138:
+crontab::117:
 nobody::99:
 users::1000:
 
