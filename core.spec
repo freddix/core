@@ -1,11 +1,11 @@
 Summary:	A set of configuration and setup files
 Name:		core
-Version:	1.0
-Release:	0.4
+Version:	1.0.1
+Release:	0.1
 License:	Public Domain, partially BSD-like
 Group:		Base
 Source0:	%{name}-%{version}.tar.xz
-# Source0-md5:	8418bc9d53a61758f4321e23bb30c7c7
+# Source0-md5:	17c12f07d7f08d6f4250569af5980338
 BuildRequires:	glibc-static
 AutoReqProv:	no
 Provides:	/sbin/postshell
@@ -29,8 +29,6 @@ A set of configuration and setup files.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-install -d $RPM_BUILD_ROOT/sbin
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT

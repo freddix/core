@@ -1,4 +1,4 @@
-VERSION		= 1.0
+VERSION		= 1.0.1
 
 CC		= gcc
 OPT_FLAGS	= -O2 -g
