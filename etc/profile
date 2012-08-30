@@ -4,3 +4,13 @@ if [ -d ~/tmp ]; then
     export TMPDIR=~/tmp
 fi
 
+# returns TRUE if $1 contains $2 and $2 is a dir
+checkpath() {
+    test -d "$2" || return 0
+    [[ $1 = *$2* ]] && return 0 || return 1
+}
+
+checkpath "$PATH" "$HOME/.local/bin" || PATH="$PATH:$HOME/.local/bin"
+checkpath "$PATH" "$HOME/bin" || PATH="$PATH:$HOME/bin"
+unset checkpath
+
