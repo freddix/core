@@ -1,7 +1,7 @@
 Summary:	A set of configuration and setup files
 Name:		core
-Version:	1.0.1
-Release:	0.1
+Version:	1.0.2.1
+Release:	1
 License:	Public Domain, partially BSD-like
 Group:		Base
 Source0:	%{name}-%{version}.tar.xz
@@ -9,11 +9,14 @@ Source0:	%{name}-%{version}.tar.xz
 BuildRequires:	glibc-static
 AutoReqProv:	no
 Provides:	/sbin/postshell
-Provides:	setup
+Obsoletes:	issue
 Obsoletes:	setup
+Provides:	issue
+Provides:	setup
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		specflags	-Os
+%define		distname	Efilnikufesin
+%define		distversion	2.0
 
 %description
 A set of configuration and setup files.
@@ -33,6 +36,25 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# /etc/issue
+cat > $RPM_BUILD_ROOT%{_sysconfdir}/issue <<EOF
+Freddix \r \m (\l)
+
+EOF
+
+# /etc/os-release
+cat > $RPM_BUILD_ROOT%{_sysconfdir}/os-release <<EOF
+# Operating system identification
+NAME="Freddix"
+VERSION="%{distversion} (%{distname})"
+ID="freddix"
+VERSION_ID="%{distversion}"
+PRETTY_NAME="Freddix is not a Linux distribution"
+ANSI_COLOR="0;34"
+HOME_URL="https://freddix.org/"
+
+EOF
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -51,6 +73,8 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/hosts
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/passwd
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/profile
+%config(noreplace) %{_sysconfdir}/issue
+%config(noreplace) %{_sysconfdir}/os-release
 %config(noreplace,missingok) %verify(not md5 mtime size) %{_sysconfdir}/filesystems
 %config(noreplace,missingok) %verify(not md5 mtime size) %{_sysconfdir}/motd
 %config(noreplace,missingok) %verify(not md5 mtime size) %{_sysconfdir}/resolv.conf
