@@ -7,8 +7,9 @@ INSTALL		= install
 SBINDIR		= /usr/sbin
 ETCDIR		= /etc
 
-ETC_FILES       = filesystems fstab group host.conf hosts motd \
-		  passwd profile resolv.conf securetty shells
+ETC_FILES       = filesystems fstab group host.conf hostname hosts \
+		  motd locale.conf passwd profile resolv.conf \
+		  securetty shells vconsole.conf
 
 DOCS		= README.asciidoc
 
