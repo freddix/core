@@ -1,6 +1,6 @@
 Summary:	A set of configuration and setup files
 Name:		core
-Version:	1.0.2.1
+Version:	1.0.3
 Release:	1
 License:	Public Domain, partially BSD-like
 Group:		Base
@@ -45,11 +45,11 @@ EOF
 # /etc/os-release
 cat > $RPM_BUILD_ROOT%{_sysconfdir}/os-release <<EOF
 # Operating system identification
-NAME="Freddix"
+NAME=Freddix
 VERSION="%{distversion} (%{distname})"
-ID="freddix"
+ID=freddix
 VERSION_ID="%{distversion}"
-PRETTY_NAME="Freddix is not a Linux distribution"
+PRETTY_NAME="Freddix %{distversion} (%{distname})"
 ANSI_COLOR="0;34"
 HOME_URL="https://freddix.org/"
 
@@ -70,9 +70,12 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/fstab
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/group
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/host.conf
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/hostname
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/hosts
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/locale.conf
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/passwd
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/profile
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/vconsole.conf
 %config(noreplace) %{_sysconfdir}/issue
 %config(noreplace) %{_sysconfdir}/os-release
 %config(noreplace,missingok) %verify(not md5 mtime size) %{_sysconfdir}/filesystems
