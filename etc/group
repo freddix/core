@@ -26,7 +26,6 @@ ftp::50:
 http::51:
 tape::68:
 usb::78:
-fuse::84:
 logs::124:
 fileshare::138:
 crontab::117:
