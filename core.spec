@@ -1,11 +1,11 @@
 Summary:	A set of configuration and setup files
 Name:		core
-Version:	1.0.3
+Version:	1.0.4
 Release:	1
 License:	Public Domain, partially BSD-like
 Group:		Base
 Source0:	%{name}-%{version}.tar.xz
-# Source0-md5:	17c12f07d7f08d6f4250569af5980338
+# Source0-md5:	e227ce259dc94a82126772f8129d5391
 BuildRequires:	glibc-static
 AutoReqProv:	no
 Provides:	/sbin/postshell
@@ -50,7 +50,7 @@ VERSION="%{distversion} (%{distname})"
 ID=freddix
 VERSION_ID="%{distversion}"
 PRETTY_NAME="Freddix %{distversion} (%{distname})"
-ANSI_COLOR="0;34"
+ANSI_COLOR="1;37"
 HOME_URL="https://freddix.org/"
 
 EOF
