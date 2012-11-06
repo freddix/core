@@ -1,6 +1,6 @@
 Summary:	A set of configuration and setup files
 Name:		core
-Version:	1.0.3
+Version:	1.0.4
 Release:	1
 License:	Public Domain, partially BSD-like
 Group:		Base
@@ -50,7 +50,7 @@ VERSION="%{distversion} (%{distname})"
 ID=freddix
 VERSION_ID="%{distversion}"
 PRETTY_NAME="Freddix %{distversion} (%{distname})"
-ANSI_COLOR="0;34"
+ANSI_COLOR="1;37"
 HOME_URL="https://freddix.org/"
 
 EOF
