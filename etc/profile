@@ -10,7 +10,28 @@ checkpath() {
     [[ $1 = *$2* ]] && return 0 || return 1
 }
 
+# extend PATH
 checkpath "$PATH" "$HOME/.local/bin" || PATH="$PATH:$HOME/.local/bin"
 checkpath "$PATH" "$HOME/bin" || PATH="$PATH:$HOME/bin"
 unset checkpath
+export PATH
 
+# set environment variables (important for autologin on tty)
+export HOSTNAME=${HOSTNAME:-$(hostname)}
+
+# make sure /usr/bin/id is available
+if [[ -x /usr/bin/id ]] ; then
+    [[ -z "$USER" ]] && export USER=$(/usr/bin/id -un)
+    [[ $LOGNAME == LOGIN ]] && LOGNAME=$(/usr/bin/id -un)
+fi
+
+if [ -f /usr/bin/vim ]; then
+    export EDITOR=${EDITOR:-vim}
+else
+    export EDITOR=${EDITOR:-vi}
+fi
+
+export PAGER=${PAGER:-less}
+export MAIL=${MAIL:-/var/mail/$USER}
+
+# vi:filetype=sh
