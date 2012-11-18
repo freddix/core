@@ -1,11 +1,11 @@
 Summary:	A set of configuration and setup files
 Name:		core
-Version:	1.0.4
+Version:	1.0.4.1
 Release:	1
 License:	Public Domain, partially BSD-like
 Group:		Base
 Source0:	%{name}-%{version}.tar.xz
-# Source0-md5:	e227ce259dc94a82126772f8129d5391
+# Source0-md5:	8657b1078aeada7cd1592fb053d6ccaa
 BuildRequires:	glibc-static
 AutoReqProv:	no
 Provides:	/sbin/postshell
