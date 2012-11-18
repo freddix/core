@@ -1,6 +1,6 @@
 Summary:	A set of configuration and setup files
 Name:		core
-Version:	1.0.4
+Version:	1.0.4.1
 Release:	1
 License:	Public Domain, partially BSD-like
 Group:		Base
