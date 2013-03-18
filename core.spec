@@ -1,11 +1,11 @@
 Summary:	A set of configuration and setup files
 Name:		core
-Version:	1.0.4.1
+Version:	1.0.4.2
 Release:	1
 License:	Public Domain, partially BSD-like
 Group:		Base
 Source0:	%{name}-%{version}.tar.xz
-# Source0-md5:	8657b1078aeada7cd1592fb053d6ccaa
+# Source0-md5:	d8a8e3293ed30dcbffd52aa2284d9721
 BuildRequires:	glibc-static
 AutoReqProv:	no
 Provides:	/sbin/postshell
@@ -75,6 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/locale.conf
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/passwd
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/profile
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/sysctl.conf
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/vconsole.conf
 %config(noreplace) %{_sysconfdir}/issue
 %config(noreplace) %{_sysconfdir}/os-release

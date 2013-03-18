@@ -1,4 +1,4 @@
-VERSION		= 1.0.4.1
+VERSION		= 1.0.4.2
 
 CC		= gcc
 OPT_FLAGS	= -O2 -g
@@ -9,7 +9,7 @@ ETCDIR		= /etc
 
 ETC_FILES       = filesystems fstab group host.conf hostname hosts \
 		  motd locale.conf passwd profile resolv.conf \
-		  securetty shells vconsole.conf
+		  securetty shells sysctl.conf vconsole.conf
 
 DOCS		= README.asciidoc
 
