@@ -1,23 +1,19 @@
-VERSION		= 1.0.4.2
+VERSION	  = 1.0.5
 
-CC		= gcc
-OPT_FLAGS	= -O2 -g
-CFLAGS		= $(OPT_FLAGS) -Wall
-INSTALL		= install
-SBINDIR		= /usr/sbin
-ETCDIR		= /etc
+CC        = gcc
+OPT_FLAGS = -O2 -g
+CFLAGS    = $(OPT_FLAGS) -Wall
+INSTALL   = install
+SBINDIR   = /usr/sbin
+ETCDIR    = /etc
 
-ETC_FILES       = filesystems fstab group host.conf hostname hosts \
-		  motd locale.conf passwd profile resolv.conf \
-		  securetty shells sysctl.conf vconsole.conf
-
-DOCS		= README.asciidoc
-
+ETC_FILES = filesystems fstab group host.conf hostname hosts \
+						motd locale.conf passwd profile resolv.conf \
+						securetty shells sysctl.conf vconsole.conf
+DOCS      = README.asciidoc
 BIN_FILES	= tools/delpasswd tools/joinpasswd tools/postshell
-
 SOURCES		= tools/delpasswd.c tools/joinpasswd.c tools/postshell.c
-
-CLEAN		= $(BIN_FILES) *.o *.tar.xz *~
+CLEAN     = $(BIN_FILES) *.o *.tar.xz *~
 
 all: $(BIN_FILES)
 

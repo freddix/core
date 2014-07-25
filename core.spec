@@ -1,6 +1,6 @@
 Summary:	A set of configuration and setup files
 Name:		core
-Version:	1.0.4.2
+Version:	1.0.5
 Release:	1
 License:	Public Domain, partially BSD-like
 Group:		Base
@@ -15,8 +15,8 @@ Provides:	issue
 Provides:	setup
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		distname	Efilnikufesin
-%define		distversion	2.0
+%define		distname	Autumn Twilight
+%define		distversion	2.1
 
 %description
 A set of configuration and setup files.
