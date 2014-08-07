@@ -1,7 +1,7 @@
 Summary:	A set of configuration and setup files
 Name:		core
-Version:	1.0.5
-Release:	1
+Version:	1.1.0
+Release:	0.1
 License:	Public Domain, partially BSD-like
 Group:		Base
 Source0:	%{name}-%{version}.tar.xz

@@ -1,4 +1,4 @@
-VERSION	  = 1.0.5
+VERSION	  = 1.1.0
 
 CC        = gcc
 OPT_FLAGS = -O2 -g
@@ -7,9 +7,9 @@ INSTALL   = install
 SBINDIR   = /usr/sbin
 ETCDIR    = /etc
 
-ETC_FILES = filesystems fstab group host.conf hostname hosts \
+ETC_FILES = fstab group host.conf hostname hosts \
 						motd locale.conf passwd profile resolv.conf \
-						securetty shells sysctl.conf vconsole.conf
+						securetty shells vconsole.conf
 DOCS      = README.asciidoc
 BIN_FILES	= tools/delpasswd tools/joinpasswd tools/postshell
 SOURCES		= tools/delpasswd.c tools/joinpasswd.c tools/postshell.c
