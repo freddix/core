@@ -75,11 +75,9 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/locale.conf
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/passwd
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/profile
-%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/sysctl.conf
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/vconsole.conf
 %config(noreplace) %{_sysconfdir}/issue
 %config(noreplace) %{_sysconfdir}/os-release
-%config(noreplace,missingok) %verify(not md5 mtime size) %{_sysconfdir}/filesystems
 %config(noreplace,missingok) %verify(not md5 mtime size) %{_sysconfdir}/motd
 %config(noreplace,missingok) %verify(not md5 mtime size) %{_sysconfdir}/resolv.conf
 %attr(600,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/securetty
