@@ -1,0 +1,11 @@
+# configuration file for locale-gen script
+#
+# format:
+# <locale name> <charset>
+#
+# valid names can be found in /usr/share/i18n/{charmaps,locales}
+#
+en_US.UTF-8 UTF-8
+de_DE.UTF-8 UTF-8
+pl_PL.UTF-8 UTF-8
+
